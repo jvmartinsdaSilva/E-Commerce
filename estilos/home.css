@@ -98,30 +98,27 @@ header .BtnPesquisa{
 
 div.ItemDestaque1{
     width: 100%;
-    height: 100%;
-    
+    height: 100%; 
     background-image: url(../imagens/img1.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.ItemDestaque2 img{
+.ItemDestaque2{
     width: 100%;
     height: 100%;
-    /* background-image: url(/imagens/img2.jpg); */
+    background-image: url(../imagens/img2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.ItemDestaque3 img{ 
+.ItemDestaque3{ 
     width: 100%;
     height: 100%;
-    /* background-image: url(/imagens/img3.jpg); */
+    background-image: url(../imagens/img3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-
 
 
 .itemSelecionado{
