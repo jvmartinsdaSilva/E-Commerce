@@ -99,12 +99,12 @@ header .BtnPesquisa{
 .ItemDestaque1{
     width: 100%;
     height: 100%;
-    /* background-image: url(../imagens/img1.jpg); */
+    background-image: url(../imagens/img1.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.ItemDestaque2{
+.ItemDestaque2 img{
     width: 100%;
     height: 100%;
     /* background-image: url(/imagens/img2.jpg); */
@@ -112,7 +112,7 @@ header .BtnPesquisa{
     background-repeat: no-repeat;
 }
 
-.ItemDestaque3{
+.ItemDestaque3 img{ 
     width: 100%;
     height: 100%;
     /* background-image: url(/imagens/img3.jpg); */
@@ -120,10 +120,7 @@ header .BtnPesquisa{
     background-repeat: no-repeat;
 }
 
-.item img{
-    width: 100%;
-    height: 100%;
-}
+
 
 
 .itemSelecionado{
