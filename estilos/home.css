@@ -96,9 +96,10 @@ header .BtnPesquisa{
     width: 25%;
 }
 
-.ItemDestaque1{
+div.ItemDestaque1{
     width: 100%;
     height: 100%;
+    
     background-image: url(../imagens/img1.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
