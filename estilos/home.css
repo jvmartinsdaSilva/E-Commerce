@@ -121,7 +121,7 @@ div.ItemDestaque1{
 }
 
 
-.itemSelecionado{
+.itemDaVez{
     margin-left: 0%;
     animation: carrocel 9s infinite ;
     
@@ -177,19 +177,92 @@ div.ItemDestaque1{
     width: 100%;
 }
 
-.item button.BtnAddItem{
+button.BtnItem{
     background: var(--BtnAddColor);
     border-radius: 5px;
+    border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
-.item button:hover{
+button.BtnItem:hover{
     background: #338b0a;
     transition: 0.5s;
 }
 
-.item button:active{
-    transform: scale(1.3);
+button.BtnItem:active{
+    transform: scale(1.1);
+}
+.item button.BtnItem::before{
+    content: "Ver mais";
+}
+
+
+/* Vitrine do Item escolhido */
+
+.modalContainer{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.199);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+.Container{
+    padding: 5px;
+    width: 80%;
+    height: auto;
+    background: white;
+    border-radius: 5px;
+}
+
+.InfosContainer{
+    display: grid;
+    grid-column: auto;
+    text-align: center;
+}
+
+.InfosContainer  img{
+    margin: 10px;
+    width: 95%;
+}
+
+.InfosContainer p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.InfosContainer p.NomeItem{
+    font: bold 18px arial;
+}
+
+.InfosContainer button.BtnItem{
+    margin-top: 5px;
+    padding: 5px;
+    height: 50px;
+}
+
+button.CloseModal{
+    margin: 0 90%;
+    background: red;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    font-weight: bold;
+    border: 1px solid black;
+    color: white;
+}
+
+button.CloseModal:active{
+    transform: scale(1.2);
 }
 
 

@@ -1,59 +1,88 @@
 import { Itens } from "./Itens.js"
 
-
 const AllItens = Itens
 
-const Vitrine = document.querySelector('.VitrinePrincipal')
+const Vitrine = document.getElementById('VitrinePrincipal')
 
 
 function lerDados () {
     AllItens.map((item) => {
-        let nome = item.nome
-        let preco = item.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
-        let id = item.id
-        let img = item.img
-
-        imprimir(nome, preco, id, img)  
+        imprimirNaTela(item)  
     })
 }
 
-function imprimir(nome, preco, id, img){
-
-    let div = document.createElement('div')
+function imprimirNaTela(item){
+    let div = document.createElement('label')
     div.classList.add('item')
+    div.id = item.id
 
-    let imgTela = document.createElement('img')
-    imgTela.src = img
+    let ImgItem = document.createElement('img')
+    ImgItem.src = item.img
 
-    let NomeTela = document.createElement('p')
-    NomeTela.textContent = nome
+    let NomeItem = document.createElement('p')
+    NomeItem.textContent = item.nome
 
-    let PrecoTela = document.createElement('p')
-    PrecoTela.textContent = preco
+    let PrecoItem = document.createElement('p')
+    PrecoItem.textContent = item.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
     let ButtonAdd = document.createElement('button')
-    ButtonAdd.id = id
-    ButtonAdd.classList.add('BtnAddItem')
-    ButtonAdd.textContent = 'Adicionar'
-    
-    
-    div.appendChild(imgTela)
-    div.appendChild(NomeTela)
-    div.appendChild(PrecoTela)
+    ButtonAdd.id = item.id
+    ButtonAdd.classList.add('BtnItem')
+    ButtonAdd.onclick = VerMais
+   
+       
+    div.appendChild(ImgItem)
+    div.appendChild(NomeItem)
+    div.appendChild(PrecoItem)
     div.appendChild(ButtonAdd)
 
     Vitrine.appendChild(div)
 }
 
-
-function teste () {
-    const btns = document.querySelectorAll('.BtnAddItem')
-
-    for(const btn of btns){
-    console.log('oi')
-    }
+function VerMais(e){
+    const itemID = e.target.id
+    const modalItem = document.getElementById('modalItem')
+    modalItem.style.display = 'flex'
+    MostrarItem(itemID) 
 }
-teste()
+
+
+function MostrarItem(itemID){
+    const containerItens = document.getElementById('InfosItem')
+    containerItens.innerHTML = ''
+    AllItens.map((item) => {
+        if(item.id === itemID){
+            
+
+            let divIMg = document.createElement('div')
+            let img = document.createElement('img')
+            img.src = item.img
+            divIMg.appendChild(img)
+
+            let NomeItem = document.createElement('p')
+            NomeItem.textContent = item.nome
+
+            let PrecoItem = document.createElement('p')
+            PrecoItem.textContent = `Preço da unidade: ${item.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+
+            let DescricaoItem = document.createElement('p')
+            DescricaoItem.textContent = item.descricao
+
+
+            containerItens.appendChild(divIMg)
+            containerItens.appendChild(NomeItem)
+            containerItens.appendChild(DescricaoItem)
+            containerItens.appendChild(PrecoItem)
+        }
+    })
+}
+
+const buttonCloseModal = document.getElementById('closeModal')
+
+buttonCloseModal.addEventListener('click', () => {
+    const modalItem = document.getElementById('modalItem')
+    modalItem.style.display = 'none'    
+})
 
 
 lerDados()

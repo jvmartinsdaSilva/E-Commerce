@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos/home.css">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="estilos/home.css">
+        <script type="module" src="scripts/home.js"></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <h1>Minha Loja</h1>
 
         <nav class="itens">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="#">Carrinho</a>
             <a href="#">Login</a>
         </nav>
@@ -26,7 +27,7 @@
     </header>
     <div class="VitrineDestaque">
         <div class="ItensDestaque">
-            <div class="item  itemSelecionado">
+            <div class="item  itemDaVez">
                 <div class="ItemDestaque1">              
                 </div>
             </div>
@@ -45,19 +46,36 @@
         </div>
     </div>
 
-    <div class="VitrinePrincipal">
+    <div id='VitrinePrincipal'class="VitrinePrincipal">
         <!-- 
             <label for="it1" class="item">
                 <img src="imagens/img1.jpg" alt="">
             <p class="NomeItem">Kit Eletrônico</p>
             <p class="PrecoItem">R$380.00</p>
-            <button id="it1" class="BtnAddItem">Adicionar</button>
+            <button id="it1" class="BtnItem">Adicionar</button>
         </label> -->
         
     </div>
 
+    <div  id="modalItem" class="modalContainer">
+        <div class="Container">
+            <button id="closeModal" class="CloseModal">X</button>
+            <div class="InfosContainer" id="InfosItem">
+                <!-- <div class="InfosImg">
+                    <img src="imagens/img1.jpg" alt="">
+                </div>
+                <p  class="NomeItem">Nome do item</p>
+                <p class="DescricaoItem">Descrição do item</p>
+                <p class="PrecoItem">Valor por und: R$45.50</p>
+                <p class="Estoque">Restam X Unidades</p>
+                <output ></output>
+                <button id="addItem" class="BtnItem">Adicionar</button>  -->
+            </div>
+
+        </div>
+    </div>
+
     
-    <script type="module" src="scripts/home.js"></script>
 </body>
 
 </html>
