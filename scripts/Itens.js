@@ -4,7 +4,8 @@ export const Itens = [
         nome: "Kit Eletrônico",
         descricao: "Uma descrição extramamente criativa do produto",
         preco: 405.50,
-        estoque: 0,
+        estoque: 5,
+        quantidade: 0,
         id: 'Ke405'
     },
     {
@@ -12,7 +13,8 @@ export const Itens = [
         nome: "Fone de ouvido",
         descricao: "Outra descrição extramamente criativa",
         preco: 120.00,
-        estoque: 0,
+        estoque: 7,
+        quantidade: 0,
         id: "FdO120"
     },
     {
@@ -20,7 +22,8 @@ export const Itens = [
         nome: "Drone Pequeno",
         descricao: "Está descrição não foi criativa",
         preco: 205.70,
-        estoque: 0,
+        estoque: 3,
+        quantidade: 0,
         id: "DpcC205"
     },
 ]

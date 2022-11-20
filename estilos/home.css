@@ -94,6 +94,7 @@ header .BtnPesquisa{
 
 .item{
     width: 25%;
+    cursor: pointer;
 }
 
 div.ItemDestaque1{
@@ -157,7 +158,7 @@ div.ItemDestaque1{
     justify-content: space-around;
 }
 
-.VitrinePrincipal > .item{
+.VitrinePrincipal > .itemVitrine{
     display: block;
     margin-top: 10px;
     display: grid;
@@ -171,7 +172,7 @@ div.ItemDestaque1{
     grid-template-rows: repeat(4, auto);
 }
 
-.item img{
+.itemVitrine img{
     background-size: cover;
     height: 100px;
     width: 100%;
@@ -192,9 +193,6 @@ button.BtnItem:hover{
 
 button.BtnItem:active{
     transform: scale(1.1);
-}
-.item button.BtnItem::before{
-    content: "Ver mais";
 }
 
 
