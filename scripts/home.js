@@ -4,6 +4,8 @@ const AllItens = Itens
 
 const Vitrine = document.getElementById('VitrinePrincipal')
 
+/* Lê e imprimi os dados na tela */
+
 
 function lerDados() {
     AllItens.map((item) => {
@@ -38,7 +40,6 @@ function imprimirNaTela(item) {
     div.appendChild(ButtonAdd)
 
     Vitrine.appendChild(div)
-
 }
 
 
@@ -49,6 +50,7 @@ function VerMais(e) {
     MostrarItem(itemID)
 }
 
+/*    Parte responsavél para mostrar o item escolhido */ 
 
 function MostrarItem(itemID) {
     const containerItens = document.getElementById('InfosItem')
@@ -75,17 +77,21 @@ function MostrarItem(itemID) {
             ItemEstoque.textContent = `Itens em estoque ${item.estoque}`
 
             let Quantidade = document.createElement('p')
+            Quantidade.classList.add('InfosQuantidade')
 
             let QuantidadeBtnMenos = document.createElement('button')
+            QuantidadeBtnMenos.classList.add('BtnQuantidade')
             QuantidadeBtnMenos.id = itemID
             QuantidadeBtnMenos.onclick = RemoverUm
             QuantidadeBtnMenos.textContent = "<"
 
             let QuantidadeNumber = document.createElement('sapn')
+            
             QuantidadeNumber.id = `sapnId${itemID}`
             QuantidadeNumber.textContent = item.quantidade
 
             let QuantidadeBtnMais = document.createElement('button')
+            QuantidadeBtnMais.classList.add('BtnQuantidade')
             QuantidadeBtnMais.id = itemID
             QuantidadeBtnMais.onclick = AdicionarverUm
             QuantidadeBtnMais.textContent = ">"

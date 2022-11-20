@@ -33,8 +33,7 @@ header h1{
 }
 
 header nav{
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 10px;   
 }
 
 header nav a{
@@ -65,7 +64,7 @@ header .inputPesquisa{
     width: 85%;
     height: 3em;
     padding: 5px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 10px;
     border: none;
 }
@@ -81,7 +80,7 @@ header .BtnPesquisa{
 
 /* Carrocel */
 
-.VitrineDestaque{  
+.VitrineDestaque{
     overflow: hidden;
     height: 250px;
 }
@@ -170,6 +169,7 @@ div.ItemDestaque1{
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);
     padding: 5px;
     grid-template-rows: repeat(4, auto);
+    font-size: 20px;
 }
 
 .itemVitrine img{
@@ -232,12 +232,12 @@ button.BtnItem:active{
 }
 
 .InfosContainer p {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 10px;
 }
 
 .InfosContainer p.NomeItem{
-    font: bold 18px arial;
+    font: bold 20px arial;
 }
 
 .InfosContainer button.BtnItem{
@@ -246,9 +246,32 @@ button.BtnItem:active{
     height: 50px;
 }
 
+.InfosQuantidade{
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.InfosQuantidade .BtnQuantidade{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--color1);
+    cursor: pointer;
+}
+
+.BtnQuantidade:active{
+    transform: scale(1.2);
+}
+
 button.CloseModal{
     margin: 0 90%;
-    background: red;
+    background: var(--color1);
     display: block;
     width: 20px;
     height: 20px;
@@ -257,6 +280,7 @@ button.CloseModal{
     font-weight: bold;
     border: 1px solid black;
     color: white;
+    cursor: pointer;
 }
 
 button.CloseModal:active{
