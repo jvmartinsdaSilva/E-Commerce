@@ -1,15 +1,15 @@
 import { Itens } from "./Itens.js"
 
-const AllItens = Itens
 
 const Vitrine = document.getElementById('VitrinePrincipal')
+
+let Carrinho = []
 
 /* Lê e imprimi os dados na tela */
 
 
 function lerDados() {
-    
-    AllItens.map((item) => {
+    Itens.map((item) => {
         imprimirNaTela(item)
     })
 }
@@ -20,9 +20,8 @@ const BtnPesquisa = document.querySelector('#BtnPesquisa')
 BtnPesquisa.addEventListener('click', PesquisarItem)
 
 
-
 function imprimirNaTela(item) {
-    
+
 
     let div = document.createElement('label')
     div.classList.add('itemVitrine')
@@ -60,13 +59,13 @@ function VerMais(e) {
     MostrarItem(itemID)
 }
 
-/*    Parte responsavél para mostrar o item escolhido */ 
+/*    Parte responsavél para mostrar o item escolhido */
 
 function MostrarItem(itemID) {
     const containerItens = document.getElementById('InfosItem')
     containerItens.innerHTML = ''
 
-    AllItens.map((item) => {
+    Itens.map((item) => {
         if (item.id === itemID) {
 
             let divIMg = document.createElement('div')
@@ -97,14 +96,14 @@ function MostrarItem(itemID) {
             QuantidadeBtnMenos.textContent = "<"
 
             let QuantidadeNumber = document.createElement('sapn')
-            
+
             QuantidadeNumber.id = `sapnId${itemID}`
             QuantidadeNumber.textContent = item.quantidade
 
             let QuantidadeBtnMais = document.createElement('button')
             QuantidadeBtnMais.classList.add('BtnQuantidade')
             QuantidadeBtnMais.id = itemID
-            QuantidadeBtnMais.onclick = AdicionarverUm
+            QuantidadeBtnMais.onclick = AdicionarUm
             QuantidadeBtnMais.textContent = ">"
 
             Quantidade.appendChild(QuantidadeBtnMenos)
@@ -119,6 +118,7 @@ function MostrarItem(itemID) {
             let BtnAddCarrinho = document.createElement('button')
             BtnAddCarrinho.classList.add('BtnItem')
             BtnAddCarrinho.id = itemID
+            BtnAddCarrinho.onclick = AdicionarCarrinho
             BtnAddCarrinho.textContent = "Adicionar ao carrinho"
 
 
@@ -137,11 +137,10 @@ function MostrarItem(itemID) {
 function RemoverUm(e) {
     let meuId = e.target.id
 
-    AllItens.map((item) => {
+    Itens.map((item) => {
         if (item.id === meuId) {
             if (item.quantidade > 0) {
                 item.quantidade--
-                console.log(item.quantidade)
                 return item.quantidade
             } else {
                 return
@@ -151,14 +150,13 @@ function RemoverUm(e) {
     MostrarItem(meuId)
 }
 
-function AdicionarverUm(e) {
+function AdicionarUm(e) {
     let meuId = e.target.id
 
-    AllItens.map((item) => {
+    Itens.map((item) => {
         if (item.id === meuId) {
             if (item.quantidade < item.estoque) {
                 item.quantidade++
-                console.log(item.quantidade)
                 return item.quantidade
             } else {
                 return
@@ -166,30 +164,47 @@ function AdicionarverUm(e) {
         }
     })
     MostrarItem(meuId)
-
 }
 
-const buttonCloseModal = document.getElementById('closeModal')
 
-buttonCloseModal.addEventListener('click', () => {
-    const modalItem = document.getElementById('modalItem')
-    modalItem.style.display = 'none'
-})
+function AdicionarCarrinho() {
+    Carrinho = []
+
+    Itens.map((item) => {
+        if(item.quantidade > 0){
+            Carrinho.push(item)
+        }
+    })
+    
+    
+    closeModal()  
+}
 
 
-function PesquisarItem(){
+function PesquisarItem() {
     const PesquisaItem = Pesquisa.value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     Vitrine.innerHTML = ''
-
-    AllItens.map((item) => {
-        if(item.nome.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").indexOf(PesquisaItem) != -1){
+    
+    Itens.map((item) => {
+        if (item.nome.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").indexOf(PesquisaItem) != -1) {
             console.log('Achou')
             imprimirNaTela(item)
         } else {
             console.log('Não Achou')
         }
     })
- 
+
 }
+
+
+const buttonCloseModal = document.getElementById('closeModal')
+
+buttonCloseModal.addEventListener('click', closeModal)
+
+function closeModal () {
+    const modalItem = document.getElementById('modalItem')
+    modalItem.style.display = 'none'   
+}
+
 
 lerDados()

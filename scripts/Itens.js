@@ -26,4 +26,22 @@ export const Itens = [
         quantidade: 0,
         id: "DpcC205"
     },
+    {
+        img: "imagens/img4.jpg",
+        nome: "DualShock4",
+        descricao: "Controle de PS4 Branco",
+        preco: 210.00,
+        estoque: 15,
+        quantidade: 0,
+        id: "DS4210"
+    },
+    {
+        img: "imagens/img5.jpg",
+        nome: "MacBook",
+        descricao: "MacBook",
+        preco: 4999.00,
+        estoque: 5,
+        quantidade: 0,
+        id: "McB499"
+    },
 ]
