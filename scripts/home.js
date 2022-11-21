@@ -8,12 +8,22 @@ const Vitrine = document.getElementById('VitrinePrincipal')
 
 
 function lerDados() {
+    
     AllItens.map((item) => {
         imprimirNaTela(item)
     })
 }
 
+const Pesquisa = document.querySelector('#pesquisaNome')
+const BtnPesquisa = document.querySelector('#BtnPesquisa')
+
+BtnPesquisa.addEventListener('click', PesquisarItem)
+
+
+
 function imprimirNaTela(item) {
+    
+
     let div = document.createElement('label')
     div.classList.add('itemVitrine')
     div.id = item.id
@@ -76,6 +86,7 @@ function MostrarItem(itemID) {
             let ItemEstoque = document.createElement('p')
             ItemEstoque.textContent = `Itens em estoque ${item.estoque}`
 
+
             let Quantidade = document.createElement('p')
             Quantidade.classList.add('InfosQuantidade')
 
@@ -99,6 +110,8 @@ function MostrarItem(itemID) {
             Quantidade.appendChild(QuantidadeBtnMenos)
             Quantidade.appendChild(QuantidadeNumber)
             Quantidade.appendChild(QuantidadeBtnMais)
+
+
 
             let Total = document.createElement('p')
             Total.textContent = `Total a pagar ${(item.quantidade * item.preco).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`
@@ -136,7 +149,6 @@ function RemoverUm(e) {
         }
     })
     MostrarItem(meuId)
-
 }
 
 function AdicionarverUm(e) {
@@ -164,5 +176,20 @@ buttonCloseModal.addEventListener('click', () => {
     modalItem.style.display = 'none'
 })
 
+
+function PesquisarItem(){
+    const PesquisaItem = Pesquisa.value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    Vitrine.innerHTML = ''
+
+    AllItens.map((item) => {
+        if(item.nome.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").indexOf(PesquisaItem) != -1){
+            console.log('Achou')
+            imprimirNaTela(item)
+        } else {
+            console.log('Não Achou')
+        }
+    })
+ 
+}
 
 lerDados()
