@@ -1,11 +1,13 @@
 import { Itens } from "./Itens.js";
 import { AdicionarCarrinho } from "./Carrinho.js";
+import { FecharCarrinho } from "./Carrinho.js";
 
 
 export function VerMais(e) {
     const itemID = e.target.id
     const modalItem = document.getElementById('modalItem')
     modalItem.style.display = 'flex'
+    FecharCarrinho()
     MostrarItem(itemID)
 }
 
@@ -117,7 +119,7 @@ function AdicionarUm(e) {
 }
 
 
-const buttonCloseModal = document.getElementById('closeModal')
+const buttonCloseModal = document.getElementById('closeModalItem')
 buttonCloseModal.addEventListener('click', closeModal)
 
  export function closeModal() {

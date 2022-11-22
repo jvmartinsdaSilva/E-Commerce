@@ -37,7 +37,7 @@ header nav {
     margin-top: 10px;
 }
 
-header nav a {
+header nav span {
     display: inline-block;
     margin: 10px;
     padding: 5px;
@@ -45,9 +45,10 @@ header nav a {
     font: bold 20px arial;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-header nav a:hover {
+header nav span:hover {
     background: white;
     color: var(--color1);
     text-decoration: underline;
@@ -202,7 +203,7 @@ button.BtnItem:active {
 .modalContainer {
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.199);
+    background: #00000033;
     position: fixed;
     top: 0;
     left: 0;
@@ -271,7 +272,7 @@ button.BtnItem:active {
 }
 
 button.CloseModal {
-    margin: 0 95%;
+
     background: var(--color1);
     display: block;
     width: 20px;
@@ -284,6 +285,127 @@ button.CloseModal {
     cursor: pointer;
 }
 
+button.CloseModal.Item {
+    margin: 0 95%;
+}
+
 button.CloseModal:active {
     transform: scale(1.2);
 }
+
+
+/* Carrinho */
+
+.modalCarrinho {
+    width: 100vw;
+    height: 100vh;
+    background: #00000033;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.CarrinhoContainer{
+    width: 80%;
+    height: 90%;
+    background: white;
+    border-radius: 10px;
+}
+
+.CarrinhoMenu{
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.CarrinhoItens{
+    width: 90%;
+    height: 70%;
+    margin: 20px auto 10px;    
+    overflow: auto;
+}
+
+.CarrinhoItem{
+    display: grid;
+    grid-row: 3;
+    justify-items: center;
+    padding: 10px;
+    min-height: 100px;
+    height: auto;
+    border-bottom: 1px dashed black ;
+    
+}
+
+.CarrinhoItemImg{
+    display: block;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.CarrinhoItemImg img{
+    width: 100%;
+}
+
+.CarrinhoItemInfos{
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.CarrinhoItemInfos p{
+    margin: 5px 0px 2px;
+}
+
+.CarrinhoItemMenu button{
+    margin: 0px 20px;   
+    font-size: 40px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.BtnExc{
+    color: red;
+}
+
+button.BtnEdit{
+    color: var(--color2);
+    transform: rotateZ(125deg);
+}
+
+.BtnExc::before{
+    content: '🗑';
+}
+.BtnEdit::before{
+    content: '✏';
+}
+
+button.BtnConfirm{
+    margin: 5%;
+    width: 90%;
+    height: 45px;
+    border: none;
+    background: var(--BtnAddColor);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.BtnConfirm:hover{
+    background: #338b0a;
+    transition: 0.7s;
+}
+button.BtnConfirm:active{
+    transform: scale(1.2);
+}
+
+

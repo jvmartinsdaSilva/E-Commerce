@@ -1,11 +1,16 @@
 import { Itens } from "./Itens.js";
 import { MostrarProduto } from "./MostrarProdutos.js";
+import { MostrarCarrinho } from "./Carrinho.js";
 
 const Vitrine = document.getElementById('VitrinePrincipal')
 const Pesquisa = document.querySelector('#pesquisaNome')
 const BtnPesquisa = document.querySelector('#BtnPesquisa')
+const BtnCarrinho = document.getElementById('BtnCarrinho')
+
 
 BtnPesquisa.addEventListener('click', PesquisarItem)
+BtnCarrinho.addEventListener('click', MostrarCarrinho)
+
 
 
 function lerDados() {
@@ -13,7 +18,6 @@ function lerDados() {
         MostrarProduto(item)
     })
 }
-
 
 
 function PesquisarItem() {
@@ -31,5 +35,5 @@ function PesquisarItem() {
 
 }
 
-
 lerDados()
+
