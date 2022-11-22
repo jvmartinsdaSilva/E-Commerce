@@ -364,6 +364,7 @@ button.CloseModal:active {
 }
 
 .CarrinhoItemMenu button{
+    
     margin: 0px 20px;   
     font-size: 40px;
     border: none;
@@ -373,19 +374,19 @@ button.CloseModal:active {
 }
 
 button.BtnExc{
-    color: red;
+    color: var(--color1);
 }
 
 button.BtnEdit{
-    color: var(--color2);
-    transform: rotateZ(125deg);
+    color: var(--color3);
+    
 }
 
 .BtnExc::before{
     content: '🗑';
 }
 .BtnEdit::before{
-    content: '✏';
+    content: '🖊';
 }
 
 button.BtnConfirm{
