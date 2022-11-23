@@ -311,7 +311,8 @@ button.CloseModal:active {
 
 .CarrinhoContainer{
     width: 80%;
-    height: 90%;
+    height: 80%;
+    
     background: white;
     border-radius: 10px;
 }
@@ -393,6 +394,7 @@ button.BtnConfirm{
     margin: 5%;
     width: 90%;
     height: 45px;
+    
     border: none;
     background: var(--BtnAddColor);
     font-size: 20px;

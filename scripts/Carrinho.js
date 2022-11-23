@@ -75,6 +75,7 @@ function MostratItensCarrinho(){
         let BtnExc = document.createElement('button')
         BtnExc.classList.add('BtnExc')
         BtnExc.id = item.id
+        BtnExc.onclick = RemoverItem
         
         itemMenu.appendChild(BtnEdit)
         itemMenu.appendChild(BtnExc)
@@ -83,5 +84,16 @@ function MostratItensCarrinho(){
 
         CarrinhoItens.appendChild(ItemCarrinho)
         
+    })
+}
+
+
+function RemoverItem(e){
+    const itemID = e.target.id
+    Itens.map((item) => {
+        if(item.id === itemID){
+            item.quantidade = 0
+            AdicionarCarrinho()
+        }
     })
 }

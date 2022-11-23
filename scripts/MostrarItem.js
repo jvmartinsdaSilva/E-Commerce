@@ -70,7 +70,7 @@ function MostrarItem(itemID) {
             BtnAddCarrinho.classList.add('BtnItem')
             BtnAddCarrinho.id = itemID
             BtnAddCarrinho.onclick = AdicionarCarrinho
-            BtnAddCarrinho.textContent = "Adicionar ao carrinho"
+            BtnAddCarrinho.textContent = "Salvar no carrinho"
 
 
             containerItens.appendChild(divIMg)
