@@ -20,6 +20,7 @@ function MostrarItem(itemID) {
         if (item.id === itemID) {
 
             let divIMg = document.createElement('div')
+            divIMg.classList.add('itemImg')
             let img = document.createElement('img')
             img.src = item.img
             divIMg.appendChild(img)

@@ -4,6 +4,7 @@ import { VerMais } from "./MostrarItem.js";
 
 const BtnCloseCarrinho = document.getElementById('CloseCarrinho')
 const CarrinhoModal = document.getElementById('modalCarrinho')
+const CarrinhoItens = document.getElementById('CarrinhoItens')
 
 let Carrinho = []
 
@@ -31,8 +32,7 @@ export function FecharCarrinho () {
     CarrinhoModal.style.display = 'none'
 }
 
-function MostratItensCarrinho(){
-    const CarrinhoItens = document.getElementById('CarrinhoItens')
+function MostratItensCarrinho(){   
     CarrinhoItens.innerHTML = ''
 
     Carrinho.map((item) => {
@@ -82,9 +82,28 @@ function MostratItensCarrinho(){
 
         ItemCarrinho.appendChild(itemMenu)
 
-        CarrinhoItens.appendChild(ItemCarrinho)
-        
+        CarrinhoItens.appendChild(ItemCarrinho)     
     })
+
+    CalcularTotal()
+}
+
+
+function CalcularTotal(){
+    let Total = 0
+
+    Carrinho.map((item) => {
+        Total += item.quantidade * item.preco
+    })
+
+    let divTotal = document.createElement('div')
+    divTotal.classList.add('ValorTotal')
+
+    let TotalTexto = document.createElement('p')
+    TotalTexto.textContent = `Total á pagar: ${Total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`
+
+    divTotal.appendChild(TotalTexto)
+    CarrinhoItens.appendChild(divTotal)
 }
 
 

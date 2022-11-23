@@ -18,6 +18,9 @@ body,
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    background: beige;
+}
 
 /*  */
 
@@ -98,26 +101,14 @@ header .BtnPesquisa {
     cursor: pointer;
 }
 
-div.ItemDestaque1 {
+div.ItemDestaque{
     width: 100%;
     height: 100%;
-    background-image: url(../imagens/img1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.ItemDestaque2 {
+div.ItemDestaque img {
     width: 100%;
     height: 100%;
-    background-image: url(../imagens/img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.ItemDestaque3 {
-    width: 100%;
-    height: 100%;
-    background-image: url(../imagens/img3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -170,7 +161,7 @@ div.ItemDestaque1 {
     border-radius: 5px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);
     padding: 5px;
-    grid-template-rows: repeat(4, auto);
+    ;
     font-size: 20px;
 }
 
@@ -216,6 +207,7 @@ button.BtnItem:active {
 
 .Container {
     padding: 5px;
+    padding-right: 10px;
     width: 80%;
     height: auto;
     background: white;
@@ -283,6 +275,7 @@ button.CloseModal {
     border: 1px solid black;
     color: white;
     cursor: pointer;
+    
 }
 
 button.CloseModal.Item {
@@ -391,10 +384,10 @@ button.BtnEdit{
 }
 
 button.BtnConfirm{
-    margin: 5%;
-    width: 90%;
-    height: 45px;
-    
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    height: 45px; 
     border: none;
     background: var(--BtnAddColor);
     font-size: 20px;
@@ -411,4 +404,7 @@ button.BtnConfirm:active{
     transform: scale(1.2);
 }
 
+.ValorTotal{
+    padding: 5px;
+}
 

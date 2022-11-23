@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+
+    p{
+        font-size: 30px !important;
+    }
+
+
+    .VitrineDestaque {
+        overflow: hidden;
+        margin: auto;
+        min-width: 800px;
+        max-width: 1000px;
+        height: 320px;
+    }
+
+    div.ItemDestaque img {
+        background-size: cover;
+
+        background-repeat: no-repeat;
+    }
+    
+
+    .VitrinePrincipal {
+        margin-top: 10px;
+        grid-template-columns: repeat(3, 30%);
+
+    }
+
+    .itemVitrine img {
+        background-size: cover;
+        width: 100%;
+        height: 170px;
+    }
+    
+    .VitrinePrincipal>.itemVitrine{
+        min-height: 450px;
+        height: auto;
+    }
+    
+    .modalContainer {
+        background: #00000033;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    
+    
+    .Container {
+        padding: 5px;
+        padding-right: 10px;
+        width: 40%;
+        border-radius: 5px;
+        transform: scale(0.8);
+        
+    }
+
+    .Container button.BtnItem{
+        font-size: 25px;
+    }
+
+    .CarrinhoItens{
+        width: 90%;
+        height: 70%;
+        margin: 20px auto 10px;    
+    }
+
+    .CarrinhoItemMenu{
+        display: flex;
+    }
+    
+    .CarrinhoItem{
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding: 10px;
+        min-height: 100px;
+        height: auto;
+        border-bottom: 1px dashed black ;
+        
+    }
+
+    button.BtnConfirm{
+        margin-top: 10px;
+        width: 90%;
+        margin: 10px 5% ;
+    }
+    
+}
