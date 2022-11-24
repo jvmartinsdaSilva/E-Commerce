@@ -207,7 +207,7 @@ button.BtnItem:active {
     padding: 5px;
     width: 90%;
     height: 80%;
-    background: rgba(202, 24, 24, 0.767);
+    background: white;
     border-radius: 10px;
 }
 
