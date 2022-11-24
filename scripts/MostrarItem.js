@@ -13,8 +13,9 @@ export function VerMais(e) {
 
 
 function MostrarItem(itemID) {
-    const containerItens = document.getElementById('InfosItem')
-    containerItens.innerHTML = ''
+    const ContainerInfos = document.getElementById('InfosItem')
+    const ContainerItem = document.getElementById('ContainerItem')
+    ContainerInfos.innerHTML = ''
 
     Itens.map((item) => {
         if (item.id === itemID) {
@@ -74,14 +75,14 @@ function MostrarItem(itemID) {
             BtnAddCarrinho.textContent = "Salvar no carrinho"
 
 
-            containerItens.appendChild(divIMg)
-            containerItens.appendChild(NomeItem)
-            containerItens.appendChild(DescricaoItem)
-            containerItens.appendChild(PrecoItem)
-            containerItens.appendChild(ItemEstoque)
-            containerItens.appendChild(Quantidade)
-            containerItens.appendChild(Total)
-            containerItens.appendChild(BtnAddCarrinho)
+            ContainerInfos.appendChild(divIMg)
+            ContainerInfos.appendChild(NomeItem)
+            ContainerInfos.appendChild(DescricaoItem)
+            ContainerInfos.appendChild(PrecoItem)
+            ContainerInfos.appendChild(ItemEstoque)
+            ContainerInfos.appendChild(Quantidade)
+            ContainerInfos.appendChild(Total)
+            ContainerInfos.appendChild(BtnAddCarrinho)
         }
     })
 }
