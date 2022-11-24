@@ -36,7 +36,13 @@
     }
     
 
-
+    .Container {
+        padding: 5px;
+        width: 50%;
+        height: 70%;
+        background: white;
+        border-radius: 10px;
+    }
 
 
 

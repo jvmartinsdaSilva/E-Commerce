@@ -206,7 +206,7 @@ button.BtnItem:active {
 .Container {
     padding: 5px;
     width: 90%;
-    height: 90%;
+    height: 80%;
     background: white;
     border-radius: 10px;
 }
