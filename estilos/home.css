@@ -204,7 +204,7 @@ button.BtnItem:active {
 }
 
 .Container {
-    padding: 5px;
+    padding: 10px;
     width: 90%;
     height: 80%;
     background: white;
@@ -313,7 +313,8 @@ button.CloseModal:active {
     background: white;
     border-radius: 10px;
     display: grid;
-    grid-row: 3;
+    grid-row: auto;
+    padding: 5px;
 }
 
 .CarrinhoMenu{
@@ -327,7 +328,7 @@ button.CloseModal:active {
 
 .CarrinhoItens{
     width: 90%;
-    height: 70%;
+    height: 90%;
     margin: 20px auto 10px;    
     overflow: auto;
 }
@@ -391,7 +392,7 @@ button.BtnEdit{
 button.BtnConfirm{
     display: block;
     width: 100%;
-    height: auto;
+    height: 30px;
     margin-top: 10%; 
     border: none;
     background: var(--BtnAddColor);
