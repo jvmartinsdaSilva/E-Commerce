@@ -2,7 +2,7 @@ export const Itens = [
     {
         img: "imagens/img1.jpg",
         nome: "Kit Eletrônico",
-        descricao: "Uma descrição extramamente criativa do produto",
+        descricao: "Descrição dos itens ",
         preco: 405.50,
         estoque: 5,
         quantidade: 0,
@@ -10,8 +10,8 @@ export const Itens = [
     },
     {
         img: "imagens/img2.jpg",
-        nome: "Fone de ouvido",
-        descricao: "Outra descrição extramamente criativa",
+        nome: "HeadSet",
+        descricao: "Descrição do HeadSet",
         preco: 120.00,
         estoque: 7,
         quantidade: 0,
@@ -20,7 +20,7 @@ export const Itens = [
     {
         img: "imagens/img3.jpg",
         nome: "Drone Pequeno",
-        descricao: "Está descrição não foi criativa",
+        descricao: "Descrição do drone",
         preco: 205.70,
         estoque: 3,
         quantidade: 0,
@@ -38,7 +38,7 @@ export const Itens = [
     {
         img: "imagens/img5.jpg",
         nome: "MacBook",
-        descricao: "MacBook",
+        descricao: "Descrição do MacBook",
         preco: 4999.00,
         estoque: 5,
         quantidade: 0,
