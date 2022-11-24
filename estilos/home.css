@@ -206,15 +206,15 @@ button.BtnItem:active {
 .Container {
     padding: 5px;
     width: 90%;
-    height: 90%;
-    background: white;
+    height: 80%;
+    background: rgba(202, 24, 24, 0.767);
     border-radius: 10px;
 }
 
 .InfosContainer {
     margin-top: 10px;
     width: 100%;
-    height: 80%;
+    height: 90%;
     text-align: center;
     overflow: auto;
 
@@ -235,8 +235,6 @@ button.BtnItem:active {
     height: 100%;
     background-size: cover;
 }
-
-
 
 
 .InfosContainer button.BtnItem {
