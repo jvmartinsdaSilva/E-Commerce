@@ -11,7 +11,7 @@
     --color1: #D92546;
     --color2: #F2B705;
     --color3: #F28705;
-    --BtnAddColor: #2c0cb8;
+    --BtnAddColor: #42b80c;
 }
 
 body,
@@ -308,7 +308,6 @@ button.CloseModal:active {
 }
 
 .CarrinhoContainer{
-    padding: 5px;
     width: 80%;
     height: 90%;
     background: white;
