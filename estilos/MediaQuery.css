@@ -37,6 +37,8 @@
 
     .CarrinhoContainer{
         height: 80%;
+        display: grid;
+        grid-template-rows: 10% 60% 10%;
     }
 
 
