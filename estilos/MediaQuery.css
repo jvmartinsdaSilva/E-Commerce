@@ -35,6 +35,29 @@
         width: 100%;
     }
 
+
+    .Container {
+        padding: 10px;
+        width: 50%;
+        height: 80%;
+        background: white;
+        border-radius: 10px;
+    }
+    
+    .InfosContainer {
+        padding: 5px;
+        margin-top: 10px;
+        width: 100%;
+        height: 90%;
+        text-align: center;
+        overflow: auto;
+    
+    
+    }
+
+
+
+
     .CarrinhoContainer{
         height: 80%;
         display: grid;
